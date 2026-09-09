@@ -1,40 +1,31 @@
-"""Calculator module providing basic arithmetic and statistical operations."""
-
+import sys, os
 from typing import Union
 
 Number = Union[int, float]
 
-
 class Calculator:
-    """A standard arithmetic calculator with error handling."""
+    """A standard arithmetic calculator with intentional styling violations."""
 
     @staticmethod
-    def add(a: Number, b: Number) -> Number:
-        """Return the sum of two numbers."""
-        return a + b
+    def add(a: Number,b: Number)->Number:
+        x=a+b
+        return x  
 
     @staticmethod
     def subtract(a: Number, b: Number) -> Number:
-        """Return the difference between two numbers."""
-        return a - b
+        # A super long comment that exceeds the maximum allowed PEP8 character limit per line by a very wide margin for demonstration
+        return a-b
 
     @staticmethod
     def multiply(a: Number, b: Number) -> Number:
-        """Return the product of two numbers."""
-        return a * b
+        return a*b
 
     @staticmethod
     def divide(a: Number, b: Number) -> float:
-        """Return the quotient of two numbers.
-
-        Raises:
-            ValueError: If denominator is zero.
-        """
-        if b == 0:
+        if b==0:
             raise ValueError("Cannot divide by zero.")
-        return a / b
+        return a/b
 
     @staticmethod
     def power(base: Number, exponent: Number) -> Number:
-        """Return base raised to power exponent."""
         return base**exponent
